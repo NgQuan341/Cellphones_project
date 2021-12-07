@@ -34,7 +34,7 @@ class Accounts extends Component {
     //Chừ đang tìm cách thay đổi giá trị bên dưới để nó bằng với cái phần 2 đúng không? 
     // đại loại thế, đúng bản chất là thay đổi cái acc 1 đó ở trong phần 1, tức là nhấn nút xong thì cái block trong phần 1 phải nhảy cùng phần 2
     componentDidMount() {
-        axios.get(`http://localhost:4000/api/accounts`)
+        axios.get(`https://data-reactjs.herokuapp.com/accounts`)
             .then(res => {
                 this.setState({ account: res.data });
             })
@@ -44,7 +44,7 @@ class Accounts extends Component {
    
   Block= (id) => {
         console.log("có không");
-        axios.get(`http://localhost:4000/api/accounts/${id}`)
+        axios.get(`https://data-reactjs.herokuapp.com/accounts/${id}`)
             .then(res => {
               
                
@@ -101,7 +101,7 @@ class Accounts extends Component {
              
                 axios({
                     method: 'PUT',
-                    url: `http://localhost:4000/api/accounts/${id}`,
+                    url: `https://data-reactjs.herokuapp.com/accounts/${id}`,
                     data: acc,
                 }).then(res => {
                 }).catch(err => {

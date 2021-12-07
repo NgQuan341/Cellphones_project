@@ -92,7 +92,7 @@ class Signup extends Component {
   getData = () => {
     axios({
       method: "GET",
-      url: "http://localhost:4000/api/accounts",
+      url: "https://data-reactjs.herokuapp.com/accounts",
       data: null,
     })
       .then((res) => {
@@ -176,7 +176,7 @@ class Signup extends Component {
               block:this.state.block
             };
             axios
-              .post("http://localhost:4000/api/accounts", acc)
+              .post("https://data-reactjs.herokuapp.com/accounts", acc)
               .then((res) => {
                 console.log(res);
                 console.log(res.data);

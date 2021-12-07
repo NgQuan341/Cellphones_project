@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-// import HeaderAd from '../header/headerAd';
-// import FooterAd from '../footer/footerAd';
-// import AddProduct from './AddProduct'
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 class AllProducts extends Component {
     constructor(props) {
         super(props);
@@ -23,7 +20,7 @@ class AllProducts extends Component {
     getData = () => {
         axios({
             method: 'GET',
-            url: 'http://localhost:4000/api/products',
+            url: 'https://data-reactjs.herokuapp.com/products',
             data: null
         }).then(res => {
             this.setState({ product: res.data });
@@ -33,7 +30,7 @@ class AllProducts extends Component {
     onDelete = (id) => {
         axios({
             method: 'DELETE',
-            url: `http://localhost:4000/api/products/${id}`,
+            url: `https://data-reactjs.herokuapp.com/products/${id}`,
             data: null
         }).then(res => {
             console.log(res.data);

@@ -117,7 +117,7 @@ class AddProduct extends Component {
             type: this.state.type,
             img: this.state.img
         }
-        axios.post(' http://localhost:4000/api/products', pro1)
+        axios.post(' https://data-reactjs.herokuapp.com/products', pro1)
             .then(res => {
                 alert("Add New product successful !!!")
             })

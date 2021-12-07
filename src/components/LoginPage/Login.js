@@ -108,7 +108,7 @@ class Login extends Component {
   getData = (event) => {
     axios({
       method: "GET",
-      url: "http://localhost:4000/api/accounts",
+      url: "https://data-reactjs.herokuapp.com/accounts",
       data: null,
     })
       .then((res) => {
@@ -186,7 +186,7 @@ class Login extends Component {
             var last = acc[i].last_name;
             axios({
               method: "PUT",
-              url: `http://localhost:4000/api/accounts/${id}`,
+              url: `https://data-reactjs.herokuapp.com/accounts/${id}`,
               data: {
                 username: username,
                 password: newPass,
@@ -236,7 +236,7 @@ class Login extends Component {
                 last = acc[i].last_name;
                 axios({
                   method: "PUT",
-                  url: `http://localhost:4000/api/accounts/${id}`,
+                  url: `https://data-reactjs.herokuapp.com/accounts/${id}`,
                   data: {
                     username: username,
                     password: newPass,

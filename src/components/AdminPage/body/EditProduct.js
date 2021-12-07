@@ -69,7 +69,7 @@ class Edit extends Component {
             console.log(id);
             axios({
                 method: 'GET',
-                url: `http://localhost:4000/api/products/${id}`,
+                url: `https://data-reactjs.herokuapp.com/products/${id}`,
                 data: null
             }).then(res => {
                 this.setState({
@@ -163,7 +163,7 @@ class Edit extends Component {
             var id = match.params.id;
             axios({
                 method: 'PUT',
-                url: `http://localhost:4000/api/products/${id}`,
+                url: `https://data-reactjs.herokuapp.com/products/${id}`,
                 data: pro1,
             }).then(res => {
                 history.goBack();
